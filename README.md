@@ -11,3 +11,9 @@
   ```sh
   docker build -t node-devops-docker-demo-image .
   ```
+
+- Run a Container
+
+  ```sh
+  docker run -p 3000:3000 -d --name node-devops-docker-demo node-devops-docker-demo-image
+  ```
