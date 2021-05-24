@@ -109,3 +109,5 @@
   ```sh
   docker inspect <container_name>
   ```
+
+  **note**: you can directly use the service name from docker-compose instead of using the ipAddress(works only for the services created/declared in docker-compose).

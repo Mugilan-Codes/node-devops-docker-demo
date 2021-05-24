@@ -3,9 +3,8 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-// Get IPAddress of the container using docker inspect command
 mongoose
-  .connect('mongodb://mugil:mypassword@172.31.0.2:27017/?authSource=admin')
+  .connect('mongodb://mugil:mypassword@mongodb:27017/?authSource=admin')
   .then(() => {
     console.log('successfully connected to DB');
   })
