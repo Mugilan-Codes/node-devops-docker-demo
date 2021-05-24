@@ -7,3 +7,9 @@ services:
       - '3000:3000'
     environment:
       - PORT=3000
+
+  db:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mugil
+      - MONGO_INITDB_ROOT_PASSWORD=mypassword

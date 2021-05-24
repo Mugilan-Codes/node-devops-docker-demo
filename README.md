@@ -40,58 +40,64 @@
 
   - Build App
 
-  ```sh
-  docker-compose up -d
-  ```
+    ```sh
+    docker-compose up -d
+    ```
   
   - use this if there is a change in image (Dockerfile)
 
-  ```sh
-  docker-compose up -d --build
-  ```
+    ```sh
+    docker-compose up -d --build
+    ```
 
   - Delete App
 
-  ```sh
-  docker-compose down -v
-  ```
+    ```sh
+    docker-compose down -v
+    ```
 
   - Development docker-compose command
 
     - up
   
-    ```sh
-    docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
-    ```
+      ```sh
+      docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+      ```
 
     - Force build image for changes
 
-    ```sh
-    docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
-    ```
+      ```sh
+      docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+      ```
 
     - down
 
-    ```sh
-    docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
-    ```
+      ```sh
+      docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
+      ```
 
   - Production docker-compose command
 
     - up
   
-    ```sh
-    docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-    ```
+      ```sh
+      docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+      ```
 
     - Force build image for changes
 
-    ```sh
-    docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
-    ```
+      ```sh
+      docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+      ```
 
     - down
 
-    ```sh
-    docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v
-    ```
+      ```sh
+      docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v
+      ```
+
+- Open MongoDB directly
+
+  ```sh
+  docker exec -it node-devops-docker-demo_db_1 mongo -u "mugil" -p "mypassword"
+  ```
