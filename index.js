@@ -1,10 +1,22 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const {
+  MONGO_USER,
+  MONGO_PASSWORD,
+  MONGO_IP,
+  MONGO_PORT,
+} = require('./config/config');
+
 const app = express();
 
+const mongoURL = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
 mongoose
-  .connect('mongodb://mugil:mypassword@mongodb:27017/?authSource=admin')
+  .connect(mongoURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
   .then(() => {
     console.log('successfully connected to DB');
   })
