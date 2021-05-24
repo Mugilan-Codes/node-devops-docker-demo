@@ -114,3 +114,21 @@
   ```
 
   **note**: you can directly use the service name from docker-compose instead of using the ipAddress(works only for the services created/declared in docker-compose).
+
+- Open Redis CLI
+
+  ```sh
+  docker exec -it node-devops-docker-demo_redis_1 redis-cli
+  ```
+
+  - View Session Keys
+
+    ```sh
+    KEYS *
+    ```
+
+  - Get Session Details
+
+    ```sh
+    GET <session_key>
+    ```
