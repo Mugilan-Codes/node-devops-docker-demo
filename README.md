@@ -99,5 +99,7 @@
 - Open MongoDB directly
 
   ```sh
-  docker exec -it node-devops-docker-demo_db_1 mongo -u "mugil" -p "mypassword"
+  docker exec -it node-devops-docker-demo_mongodb_1 mongo -u "mugil" -p "mypassword"
   ```
+
+  **note**: Don't pass in `-v` flag to remove the volumes when using databases as it would ultimately remove all volumes, Instead start up the containers and run `docker volume prune` to remove unused volumes.
