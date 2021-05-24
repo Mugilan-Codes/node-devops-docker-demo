@@ -12,10 +12,10 @@
   docker build -t node-devops-docker-demo-image .
   ```
 
-- Run a Container (with port forwarding)
+- Run a Container (port fowarding & binding volumes)
 
   ```sh
-  docker run -p 3000:3000 -d --name node-devops-docker-demo node-devops-docker-demo-image
+  docker run -v $(pwd):/app -p 3000:3000 -d --name node-devops-docker-demo node-devops-docker-demo-image
   ```
 
 - Access FileSystem
