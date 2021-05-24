@@ -5,3 +5,5 @@ Dockerfile
 
 .git
 .gitignore
+
+docker-compose*

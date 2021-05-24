@@ -55,3 +55,43 @@
   ```sh
   docker-compose down -v
   ```
+
+  - Development docker-compose command
+
+    - up
+  
+    ```sh
+    docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+    ```
+
+    - Force build image for changes
+
+    ```sh
+    docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+    ```
+
+    - down
+
+    ```sh
+    docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
+    ```
+
+  - Production docker-compose command
+
+    - up
+  
+    ```sh
+    docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+    ```
+
+    - Force build image for changes
+
+    ```sh
+    docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+    ```
+
+    - down
+
+    ```sh
+    docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v
+    ```
