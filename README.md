@@ -65,6 +65,9 @@
 
       # force re-build image for changes
       docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+
+      # re-build image without downing the container and renewing volumes
+      docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build -V
       ```
 
     - down
