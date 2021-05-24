@@ -62,11 +62,8 @@
   
       ```sh
       docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
-      ```
 
-    - Force build image for changes
-
-      ```sh
+      # force re-build image for changes
       docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
       ```
 
@@ -74,6 +71,9 @@
 
       ```sh
       docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
+
+      # don't remove volumes
+      docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
       ```
 
   - Production docker-compose command
@@ -82,11 +82,8 @@
   
       ```sh
       docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-      ```
 
-    - Force build image for changes
-
-      ```sh
+      # force re-build image for changes
       docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
       ```
 
@@ -94,6 +91,9 @@
 
       ```sh
       docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v
+
+      # don't remove volumes
+      docker-compose -f docker-compose.yml -f docker-compose.prod.yml down
       ```
 
 - Open MongoDB directly
@@ -103,3 +103,9 @@
   ```
 
   **note**: Don't pass in `-v` flag to remove the volumes when using databases as it would ultimately remove all volumes, Instead start up the containers and run `docker volume prune` to remove unused volumes.
+
+- Get network details of container
+
+  ```sh
+  docker inspect <container_name>
+  ```
