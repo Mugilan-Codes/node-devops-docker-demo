@@ -12,10 +12,10 @@
   docker build -t node-devops-docker-demo-image .
   ```
 
-- Run a Container (port fowarding, bind mount, and anonymous volume)
+- Run a Container (port fowarding, bind mount(read-only), and anonymous volume)
 
   ```sh
-  docker run -v $(pwd):/app -v /app/node_modules -p 3000:3000 -d --name node-devops-docker-demo node-devops-docker-demo-image
+  docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d --name node-devops-docker-demo node-devops-docker-demo-image
   ```
 
 - Access FileSystem
