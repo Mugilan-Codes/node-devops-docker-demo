@@ -35,3 +35,23 @@
   ```sh
   docker rm node-devops-docker-demo -fv
   ```
+
+- Using Docker Compose
+
+  - Build App
+
+  ```sh
+  docker-compose up -d
+  ```
+  
+  - use this if there is a change in image (Dockerfile)
+
+  ```sh
+  docker-compose up -d --build
+  ```
+
+  - Delete App
+
+  ```sh
+  docker-compose down -v
+  ```
