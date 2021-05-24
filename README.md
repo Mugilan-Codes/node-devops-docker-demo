@@ -15,7 +15,7 @@
 - Run a Container (port fowarding, bind mount(read-only), and anonymous volume)
 
   ```sh
-  docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d --name node-devops-docker-demo node-devops-docker-demo-image
+  docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:4000 --env-file ./.env -d --name node-devops-docker-demo node-devops-docker-demo-image
   ```
 
 - Access FileSystem
