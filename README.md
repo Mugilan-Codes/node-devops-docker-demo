@@ -29,3 +29,9 @@
   ```sh
   exit
   ```
+
+- Forcefully Remove a container with volume
+
+  ```sh
+  docker rm node-devops-docker-demo -fv
+  ```
