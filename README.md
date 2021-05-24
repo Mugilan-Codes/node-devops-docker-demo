@@ -17,3 +17,15 @@
   ```sh
   docker run -p 3000:3000 -d --name node-devops-docker-demo node-devops-docker-demo-image
   ```
+
+- Access FileSystem
+
+  ```sh
+  docker exec -it node-devops-docker-demo bash
+  ```
+
+- Exit FileSystem
+
+  ```sh
+  exit
+  ```
