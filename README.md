@@ -195,6 +195,30 @@
   set -o allexport; source /root/.env; set +o allexport 
   ```
 
+- Create a directory and move into it
+
+  ```sh
+  mkdir app
+
+  cd app
+  ```
+
+- Clone the Git repo in this folder
+
+  ```sh
+  git clone <git_repo_url> .
+  ```
+
+  **Note**: This works with public repo. If you want to work with private repos, check [Deploy Keys](https://docs.github.com/en/developers/overview/managing-deploy-keys) section or [How to clone your private repository from GitHub to server, Droplet, VDS, etc?](https://dev.to/koddr/quick-how-to-clone-your-private-repository-from-github-to-server-droplet-vds-etc-39jm)
+
+- Run the production docker-compose command
+
+  ```sh
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+  ```
+
+- Make requests to `http://<ip_address_of_the_droplet>/` routes
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)
