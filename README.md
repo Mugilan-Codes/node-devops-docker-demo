@@ -284,6 +284,14 @@
   docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --no-deps node-app
   ```
 
+- Use watchtower to automatically look for changes in the remote custom build image (specify the images that needs to be watched at the end)
+
+  ```sh
+  docker run -d --name watchtower -e WATCHTOWER_TRACE=true -e WATCHTOWER_DEBUG=true -e WATCHTOWER_POLL_INTERVAL=50 -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower app_node-app_1
+  ```
+
+  **NOTE**: No need to pull and update changes in production server if watchtower is used
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)
@@ -296,3 +304,4 @@
 - [Express behind proxies](https://expressjs.com/en/guide/behind-proxies.html)
 - [Docker Script for Ubuntu](https://get.docker.com/)
 - [Install Docker Compose](https://docs.docker.com/compose/install/)
+- [Watchtower](https://containrrr.dev/watchtower/)
