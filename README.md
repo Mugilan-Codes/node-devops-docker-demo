@@ -234,6 +234,20 @@
 
 - Make requests to `http://<ip_address_of_the_droplet>/` routes
 
+- Push Images to docker to avoid building images on production server. Create a repo in `dockerhub`
+
+  - Tag the local image with the name of that of the remote image
+  
+    ```sh
+    docker tag <local_image> <username/remote_dockerhub_repo_name>    
+    ```
+
+  - Push the tagged image to dockerhub
+
+    ```sh
+    docker push <username/remote_dockerhub_repo_name>
+    ```
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)

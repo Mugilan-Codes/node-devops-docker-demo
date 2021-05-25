@@ -8,6 +8,7 @@ services:
 
   node-app:
     build: .
+    image: mugilancodes/node-app
     environment:
       - PORT=3000
     depends_on:
