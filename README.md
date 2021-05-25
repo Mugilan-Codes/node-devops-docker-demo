@@ -215,6 +215,12 @@
 
   ```sh
   docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+  # do this to see any changes made
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+
+  # rebuild only necessary service to avoid checking other containers unneccessarily
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build node-app
   ```
 
 - Make requests to `http://<ip_address_of_the_droplet>/` routes
