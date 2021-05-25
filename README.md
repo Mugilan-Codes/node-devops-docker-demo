@@ -136,6 +136,35 @@
     GET <session_key>
     ```
 
+### Steps to Production
+
+- Create Ubuntu Server on Cloud Platforms like **Digital Ocean** (I am using this one), AWS, etc..
+- Create a Droplet
+- Copy the IP Address of the Droplet provided
+- Open a terminal in your computer and SSH into the droplet
+
+  ```sh
+  ssh root@<ip_address_of_droplet_here>
+  ```
+
+- Type in `yes` to conntinue connecting
+- Type in your root password that you used while creating the droplet
+- Install docker engine in the droplet
+
+  ```sh
+  curl -fsSL https://get.docker.com -o get-docker.sh
+
+  sh get-docker.sh
+  ```
+
+- Install docker-compose by following instructions in the official documentation for linux
+
+  ```sh
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+  sudo chmod +x /usr/local/bin/docker-compose
+  ```
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)
@@ -146,3 +175,5 @@
 #### DOCS
 
 - [Express behind proxies](https://expressjs.com/en/guide/behind-proxies.html)
+- [Docker Script for Ubuntu](https://get.docker.com/)
+- [Install Docker Compose](https://docs.docker.com/compose/install/)
