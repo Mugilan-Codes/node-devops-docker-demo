@@ -66,7 +66,7 @@
       # force re-build image for changes
       docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
 
-      # re-build image without downing the container and renewing volumes
+      # re-build image without downing the container and re creating anonymous volumes
       docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build -V
 
       # scale the number of instances
