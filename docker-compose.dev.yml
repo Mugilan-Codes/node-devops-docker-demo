@@ -1,6 +1,10 @@
 version: '3'
 
 services:
+  nginx:
+    ports:
+      - '3000:80'
+
   node-app:
     build:
       context: .
@@ -15,8 +19,3 @@ services:
       - MONGO_PASSWORD=mypassword
       - SESSION_SECRET=sesionisasecret
     command: npm run dev
-
-  mongo:
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=mugil
-      - MONGO_INITDB_ROOT_PASSWORD=mypassword

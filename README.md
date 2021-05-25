@@ -68,6 +68,9 @@
 
       # re-build image without downing the container and renewing volumes
       docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build -V
+
+      # scale the number of instances
+      docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2
       ```
 
     - down
