@@ -165,6 +165,36 @@
   sudo chmod +x /usr/local/bin/docker-compose
   ```
 
+- Set Environment Variables
+
+  ```sh
+  export <key>=<value>
+  ```
+
+- Show all Env variables
+
+  ```sh
+  printenv
+  ```
+
+- Instead of individually adding env variables, setup .env file and add the .env variables into it
+
+  ```sh
+  vi .env
+  ```
+
+- Open `.profile` and add this at the bottom
+
+  ```sh
+  vi .profile
+  ```
+
+  ```vim
+  <!-- Removed the lines for brevity -->
+
+  set -o allexport; source /root/.env; set +o allexport 
+  ```
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)

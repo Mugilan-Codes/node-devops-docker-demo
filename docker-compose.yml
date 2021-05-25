@@ -15,9 +15,6 @@ services:
 
   mongo:
     image: mongo
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=mugil
-      - MONGO_INITDB_ROOT_PASSWORD=mypassword
     volumes:
       - mongo-db:/data/db
 
