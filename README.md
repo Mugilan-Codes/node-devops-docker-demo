@@ -292,6 +292,24 @@
 
   **NOTE**: No need to pull and update changes in production server if watchtower is used
 
+- Activate docker swarm for orchestration. Get IP of the droplet by `ip add` command
+
+  ```sh
+  docker swarm init --advertise-addr <public_ip>
+  ```
+
+  - Add more manager nodes, run this command and follow the instructions
+
+    ```sh
+    docker swarm join-token manager
+    ```
+
+  - Add worker node to swarm
+
+    ```sh
+    docker swarm join --token <token_provided> <ip>:<port>
+    ```
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)
@@ -305,3 +323,4 @@
 - [Docker Script for Ubuntu](https://get.docker.com/)
 - [Install Docker Compose](https://docs.docker.com/compose/install/)
 - [Watchtower](https://containrrr.dev/watchtower/)
+- [Docker Compose Deploy Reference](https://docs.docker.com/compose/compose-file/compose-file-v3/#deploy)
