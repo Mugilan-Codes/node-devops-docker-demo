@@ -316,6 +316,36 @@
   docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml myapp
   ```
 
+  - check how many nodes are running
+
+    ```sh
+    docker node ls
+    ```
+
+  - check how many stacks are there
+
+    ```sh
+    docker stack ls
+    ```
+
+  - list the services in the stack
+
+    ```sh
+    docker stack services myapp
+    ```
+
+  - list all the services across all stacks
+
+    ```sh
+    docker service ls
+    ```
+
+  - list the tasks in the stack
+
+    ```sh
+    docker stack ps myapp
+    ```
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)
