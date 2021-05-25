@@ -248,6 +248,42 @@
     docker push <username/remote_dockerhub_repo_name>
     ```
 
+- Build the image on local machine
+
+  ```sh
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
+
+  # build only the services that is required (custom image)
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml build node-app
+  ```
+
+- Push the custom build image to dockerhub
+
+  ```sh
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml push
+
+  # push only the services that we want
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml push node-app
+  ```
+
+- Pull the latest images in the production server
+
+  ```sh
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull
+
+  # only specific image
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml pull node-app
+  ```
+
+- Update the changes in producton server
+
+  ```sh
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+  # specific rebuild
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --no-deps node-app
+  ```
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)
