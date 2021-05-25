@@ -310,6 +310,12 @@
     docker swarm join --token <token_provided> <ip>:<port>
     ```
 
+- Deploy
+
+  ```sh
+  docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml myapp
+  ```
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)
