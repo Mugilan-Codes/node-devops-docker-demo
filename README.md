@@ -203,7 +203,7 @@
   cd app
   ```
 
-- Clone the Git repo in this folder
+- Clone the Git repo in this folder and pull whenever there is a change
 
   ```sh
   git clone <git_repo_url> .
@@ -221,6 +221,9 @@
 
   # rebuild only necessary service to avoid checking other containers unneccessarily
   docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build node-app
+
+  # when you don't want to check for dependencies
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build --no-deps node-app
   ```
 
 - Make requests to `http://<ip_address_of_the_droplet>/` routes
