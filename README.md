@@ -224,6 +224,12 @@
 
   # when you don't want to check for dependencies
   docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build --no-deps node-app
+
+  # force rebuild containers even when there is no change
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --force-recreate node-app
+
+  # force rebuild containers even when there is no change without dependecies
+  docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --force-recreate --no-deps node-app
   ```
 
 - Make requests to `http://<ip_address_of_the_droplet>/` routes
