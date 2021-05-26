@@ -346,6 +346,11 @@
     docker stack ps myapp
     ```
 
+#### TODO
+
+- [ ] Add SSL Certificate (https)
+- [ ] Add Domain Name
+
 #### Docker Images
 
 - [node](https://hub.docker.com/_/node)
