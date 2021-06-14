@@ -4,6 +4,12 @@
 
 [Devops with Docker and Node.js Youtube Playlist](https://www.youtube.com/playlist?list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY)
 
+### Resourc
+
+- [Nginx and Let’s Encrypt with Docker in Less Than 5 Minutes](https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71)
+- [Setup Nginx and Let’s Encrypt with Docker](https://www.thirdrocktechkno.com/blog/setup-nginx-and-lets-encrypt-with-docker/)
+- [Docker compose of nginx, express, letsencrypt SSL get 502 Bad gateway](https://stackoverflow.com/questions/57743088/docker-compose-of-nginx-express-letsencrypt-ssl-get-502-bad-gateway)
+
 ### Commands
 
 - Build App Image
