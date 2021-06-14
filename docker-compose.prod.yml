@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  nginx:
+  # nginx:
   #   ports:
   #     - '80:80' # http
   #     - '443:443' # https
