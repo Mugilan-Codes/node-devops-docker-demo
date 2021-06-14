@@ -4,7 +4,7 @@
 
 [Devops with Docker and Node.js Youtube Playlist](https://www.youtube.com/playlist?list=PL8VzFQ8k4U1JEu7BLraz8MdKJILJir7oY)
 
-### Resourc
+### Resource
 
 - [Nginx and Let’s Encrypt with Docker in Less Than 5 Minutes](https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71)
 - [Setup Nginx and Let’s Encrypt with Docker](https://www.thirdrocktechkno.com/blog/setup-nginx-and-lets-encrypt-with-docker/)
@@ -354,8 +354,15 @@
 
 #### TODO
 
-- [ ] Add SSL Certificate (https)
-- [ ] Add Domain Name
+- [X] Add SSL Certificate (https)
+
+- [X] Add Domain Name
+
+- [ ] Modify ./init-letsencrypt.sh to use docker swarm and production docker compose
+
+- [ ] Run the modified ./init-letsencrypt.sh on the server for first time to generate fake certificates
+
+- [ ] Everything must be automated
 
 #### Docker Images
 
